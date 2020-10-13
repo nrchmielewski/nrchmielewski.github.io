@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+:root {
+    --red: #F94144;
+    --red-accent: #FDB1B2;
+    --orange: #F3722C;
+    --orange-accent: #FFC7A8;
+    --yellow: #F9C74F;
+    --yellow-accent: #FFECBD;
+    --green: #90BE6D;
+    --green-accent: #D0DBC8;
+    --blue: #577590;
+    --blue-accent: #AAC3D2;
+    --white: #FAFAFA;
+  }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--white);
+    scroll-behavior: smooth;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: #111111;
+    /* position: sticky;
+    top: 0;
+    background-color: #FAFAFA;
+    box-shadow: rgba(0,0,0,0.15) 1px 3px; */
+}
+.nav-title {
+    display: inline-block;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+}
+.nav-title:hover {
+    color: #444444;
+    transition-duration: 200ms;
+}
+.nav-title b {
+    font-weight: 600;
+}
+.nav-links {
+    display: inline-block;
+    margin-left: auto;
+    font-weight: 500;
+}
+.nav-links li {
+    display: inline-block;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+}
+.nav-links li:first-child {
+    margin-left: 0;
+}
+.nav-links li:last-child {
+    margin-right: 0;
+}
+a.slide {
+    background:
+    linear-gradient(
+      to bottom, var(--red) 0%,
+      var(--red) 100%
+    );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+    color: #000;
+    text-decoration: none;
+    transition: background-size .2s;
+    padding: 5px;
+}
+a.slide:hover {
+    background-size: 4px 50px !important;
+    color: var(--white) !important;
+}
+a.slide.selected {
+    background-size: 4px 50px !important;
+    color: var(--white) !important;
+}
+a.slide.orange {
+    background:
+    linear-gradient(
+      to bottom, var(--orange) 0%,
+      var(--orange) 100%
+    );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+    color: #000;
+    text-decoration: none;
+    transition: background-size .2s;
+    padding: 5px;
+}
+a.slide.yellow {
+    background:
+    linear-gradient(
+      to bottom, var(--yellow) 0%,
+      var(--yellow) 100%
+    );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+    color: #000;
+    text-decoration: none;
+    transition: background-size .2s;
+    padding: 5px;
+}
+a.slide.green {
+    background:
+    linear-gradient(
+      to bottom, var(--green) 0%,
+      var(--green) 100%
+    );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+    color: #000;
+    text-decoration: none;
+    transition: background-size .2s;
+    padding: 5px;
+}
+a.slide.blue {
+    background:
+    linear-gradient(
+      to bottom, var(--blue) 0%,
+      var(--blue) 100%
+    );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+    color: #000;
+    text-decoration: none;
+    transition: background-size .2s;
+    padding: 5px;
+}
+a.slide.white {
+    background:
+    linear-gradient(
+      to bottom, var(--white) 0%,
+      var(--white) 100%
+    );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+    color: #000;
+    text-decoration: none;
+    transition: background-size .2s;
+    padding: 5px;
+}
+
+@media (max-width:900px){
+    .nav-title {
+        width: min-content;
+    }
+}
+@media (max-width:700px){
+    .nav {
+        display: block;
+        text-align: center;
+    }
+    .nav-links {
+        display: block;
+    }
+}
+
+.intro {
+    margin: 5rem auto 5rem auto;
+    width: fit-content;
+    max-width: 80%;
+    height: fit-content;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+@media (max-width:900px){
+    .intro {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+.intro h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+p {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.section {
+    margin: 9rem 0 0 0;
+    padding: 2rem 4rem;
+    color: white;
+}
+
+.section.red {
+    background-color: var(--red);
+}
+.section.orange {
+    background-color: var(--orange);
+}
+.section.yellow {
+    background-color: var(--yellow);
+}
+.section.green {
+    background-color: var(--green);
+}
+.section.blue {
+    background-color: var(--blue);
+}
+
+.section h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.section p {
+    font-size: 1.15rem;
+}
+
+.profile {
+    max-height: 20rem;
+    max-width: 20rem;
+}
+
+.projects {
+    display: grid;
+    margin: 4rem 1.5rem;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+    grid-auto-rows: 1fr;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    margin: 1.5rem auto 0 auto;
+    padding: 2rem;
+    background: var(--blue);
+    color: white;
+    border-radius: 0px 10px 10px 10px;
+    transition: all .3s ease-out;
+    transform: translate(0, 0px);
+}
+
+.project.red {
+    background: var(--red);
+}
+.project.orange {
+    background: var(--orange);
+}
+.project.yellow {
+    background: var(--yellow);
+}
+.project.green {
+    background: var(--green);
+}
+.project.blue {
+    background: var(--blue);
+}
+
+.project:hover {
+    transform: translate(0, -5px);
+}
+
+.project.red:hover {
+    box-shadow: 6px 8px var(--red-accent);
+}
+.project.orange:hover {
+    box-shadow: 6px 8px var(--orange-accent);
+}
+.project.yellow:hover {
+    box-shadow: 6px 8px var(--yellow-accent);
+}
+.project.green:hover {
+    box-shadow: 6px 8px var(--green-accent);
+}
+.project.blue:hover {
+    box-shadow: 6px 8px var(--blue-accent);
+}
+
+.project:before {
+    content: " ";
+    width: 50%;
+    height: 1.5rem;
+    border-radius: 10px 15px 0 0;
+    display: block;
+    position: absolute;
+    top: -1.45rem;
+    left: 0;
+}
+
+.project.red:before {
+    background-color: var(--red);
+}
+.project.orange:before {
+    background-color: var(--orange);
+}
+.project.yellow:before {
+    background-color: var(--yellow);
+}
+.project.green:before {
+    background-color: var(--green);
+}
+.project.blue:before {
+    background-color: var(--blue);
+}
+
+.project h1 {
+    font-size: 1.5rem;
+}
+
+.project p {
+    font-size: 1.15rem;
+}
+
+.project a {
+    font-weight: bold;
+    color: white;
+}
+
+.project p a:hover {
+    opacity: 0.75;
+}
+
+.project .top {
+    height: 40px;
+}
+
+.project .top .links {
+    float: right;
+    margin-top: 5px;
+}
+
+.project .top .links a {
+    text-decoration: none;
+}
+
+.project .top .links .icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #EAEAEA;
+    cursor: pointer;
+    transition: all .3s ease-out;
+}
+
+.project .top .links .icon:hover {
+    transform: translate(0, -1px);
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.05)); 
+}
+
+.project.red .top .links .icon:hover {
+    fill: var(--red-accent);
+}
+.project.orange .top .links .icon:hover {
+    fill: var(--orange-accent);
+}
+.project.yellow .top .links .icon:hover {
+    fill: var(--yellow-accent);
+}
+.project.green .top .links .icon:hover {
+    fill: var(--green-accent);
+}
+.project.blue .top .links .icon:hover {
+    fill: var(--blue-accent);
+}
+
+.project .top .links > .icon:first-child {
+    margin-left: 0;
+}
+
+.project .top .links > .icon:last-child {
+    margin-right: 0;
+}
+
+.projects .tools {
+    margin-top: auto;
+}
+
+.project .tools > p {
+    display: inline-block;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 16px;
+    color: #AAC3D2
+}
+
+.project.red .tools > p {
+    color: var(--red-accent);
+}
+.project.orange .tools > p {
+    color: var(--orange-accent);
+}
+.project.yellow .tools > p {
+    color: var(--yellow-accent);
+}
+.project.green .tools > p {
+    color: var(--green-accent);
+}
+.project.blue .tools > p {
+    color: var(--blue-accent);
+}
+.project .tools > p:first-child {
+    margin-left: 0;
+}
+.project .tools > p:last-child {
+    margin-right: 0;
+}
+
+.profile {
+    float: left;
+    margin: 1rem 3rem 3rem 0;
+}
+
+button {
+    min-height: 3.5rem;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    background:
+    linear-gradient(
+      to bottom, var(--red) 0%,
+      var(--red) 100%
+    );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 0px 0px;
+    transition: background-size .2s;
+    border: none;
+    border: 3px solid var(--red);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: medium;
+    color: white;
+    box-shadow: none;
+}
+
+button:hover {
+    background-size: 4px 54px !important;
+    color: var(--white) !important;
+}
+
+.section button {
+    display: block;
+    margin: 3rem auto;
+}
+
+.marker {
+    height: 0px;
+}
+
+#contact .links {
+    display: grid;
+    max-width: 500px;
+    margin: 3rem auto;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(75px,1fr));
+    grid-auto-rows: 1fr;
+}
+#contact .icon {
+    margin: 0 auto;
+}
+
+#contact .icon > svg {
+    height: 55px;
+    transition: all .3s ease-out;
+    cursor: pointer;
+}
+
+#contact .icon > svg:hover {
+    transform: translate(0, -5px);
+    fill-opacity: 0.85;
+    filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.15));  
+}
+
+.intro h1:first-child, #contact h3 {
+    display: inline;
+}
+
+.intro .icon, #contact .icon {
+    display: inline-block;
+    cursor: pointer;
+    transition: all .3s ease-out;
+}
+
+.intro .icon a, #contact .icon a {
+    text-decoration: none;
+}
+
+.intro .icon:hover {
+    transform: translate(0, -3px);
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.15); 
+}
+
+#contact .icon:hover {
+    transform: translate(0, -2px);
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.15); 
+}
